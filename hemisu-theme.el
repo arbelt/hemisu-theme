@@ -85,6 +85,7 @@
      (dimmed      (if (eq variant 'light) middle-dark-grey  middle-light-grey))
      (subtle      (if (eq variant 'light) light-grey        dark-grey))
      (faint       (if (eq variant 'light) almost-white      almost-black))
+     (blok        (if (eq variant 'light) "LightYellow1"    "#101010"))
      (accent1     (if (eq variant 'light) middle-dark-blue  middle-light-blue))
      (accent2     (if (eq variant 'light) middle-dark-green middle-light-green))
      (accent3     (if (eq variant 'light) middle-dark-pink  light-green))
@@ -116,7 +117,10 @@
      `(vertical-border              ((nil (:foreground ,subtle))))
      `(header-line                  ((t (:background "#000000"))))
      `(mode-line ((t (:background ,accent2 :foreground ,bg :box nil))))
-     `(mode-line-inactive ((t (:background ,subtle :foreground ,bg :box nil)))))
+     `(mode-line-inactive ((t (:background ,subtle :foreground ,bg :box nil))))
+
+     `(org-block-background ((t (:background ,blok))))
+     )
 
 
     (custom-theme-set-variables
